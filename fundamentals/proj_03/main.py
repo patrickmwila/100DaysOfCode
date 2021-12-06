@@ -138,7 +138,6 @@ elif (var_direction == "right"):
     print('''
             Opps, you got bitten by a snake and died.
             Game over!
-
                             _.--....
                  _....---;:'::' ^__/
                .' `'`___....---=-'`
