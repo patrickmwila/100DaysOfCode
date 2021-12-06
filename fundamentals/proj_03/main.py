@@ -43,6 +43,7 @@ if (var_direction == "left"):
          )
     var_choice = input().lower()
 
+    # player survives if the answer is wait
     if (var_choice == "wait"):
         print("\nUpon waiting, a boat arrives and takes you to the other " + 
               "\nside of the island." + 
@@ -129,14 +130,31 @@ if (var_direction == "left"):
 
         ''')
     else:
-        print("Invalid input!" +
-              "\nGame over."
+        print("Invalid input." +
+              "\nGame over!"
              )
+# if player chooses right --> Game over
 elif (var_direction == "right"):
-    print("Sorry, You fell into a hole." +
-          "\nGame over."
-         )
+    print('''
+            Opps, you got bitten by a snake and died.
+            Game over!
+
+                            _.--....
+                 _....---;:'::' ^__/
+               .' `'`___....---=-'`
+              /::' (`
+              '   `:.
+               `\::.  ';-"":::-._  {}
+            _.--'`\:' .'`-.`'`.' `{I}
+         .-' `' .;;`\::.   '. _: {-I}`
+       .'  .:.  `:: _):::  _;' `{=I}.:|
+      /.  ::::`":::` ':'.-'`':. {_I}::/
+      |:. ':'  :::::  .':'`:. `'|':|:'
+        '--.:::...---'\:'.:`'`'
+                       '-::..:::-'
+          ''')
+
 else:
-    print("Invalid input!" +
-          "\nGame over."
+    print("Invalid input." +
+          "\nGame over!"
          )
