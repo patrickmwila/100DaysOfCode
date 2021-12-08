@@ -4,160 +4,73 @@
     Instructor : Dr. Angela Yu
     Description: This program simulates rock, paper, scissors game.
 """
+# import the required modules
 import random
 
-pc_rand = random.randint(0, 2)
-
-# display message and prompt for input
-print("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.")
-var_opt = int(input())
-
-if (var_opt == 0):
-    print('''
+rock = '''
     _______
 ---'   ____)
       (_____)
       (_____)
       (____)
 ---.__(___)
-    ''')
+'''
 
-    print("Computer chose: ")
-    if (pc_rand == 0):
-        print('''
+paper = '''
     _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-
-It's a draw
-        ''')
-
-    elif (pc_rand == 1):
-        print('''
-    _______
----'    ____)____
-           ______)
+---'   ____)____
+          ______)
           _______)
          _______)
 ---.__________)
+'''
 
-You won
-        ''')
-
-    elif (pc_rand == 2):
-        print('''
+scissors = '''
     _______
 ---'   ____)____
           ______)
        __________)
       (____)
 ---.__(___)
+'''
+# prompt user for input
+var_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or " + 
+                      "2 for Scissors\n"))
 
-You won
-        ''')
-    else: 
-        print("An error occured! Contact admin.")
+# create a list of the user's options
+var_gameplay = [rock, paper, scissors]
 
-elif (var_opt == 1):
-    print('''
-    _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
-    ''')
+# display the user's choice
+print(var_gameplay[var_choice])
 
-    print("Computer chose: ")
-    if (pc_rand == 0):
-        print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
+# generate a random number from 0 to 2 (this is the pc's choice)
+var_pc_choice = random.randint(0, 2)
 
-You lose
-        ''')
+# display the pc's choice
+print("Computer choose: ")
+print(var_gameplay[var_pc_choice])
 
-    elif (pc_rand == 1):
-        print('''
-    _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
+# determine the winner based on the user's choice and pc's choice
+if (var_choice == var_pc_choice):
+    print("It's a draw")
 
-It's a draw
-        ''')
+elif (var_choice == 0) and (var_pc_choice == 1):
+    print("You lost")
 
-    elif (pc_rand == 2):
-        print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
+elif (var_choice == 0) and (var_pc_choice == 2):
+    print("You won")
 
-You lose
-        ''')
-    else:
-        print("An error occured! Contact admin.")
+elif (var_choice == 1) and (var_pc_choice == 0):
+    print("You won")
 
-elif (var_opt == 2):
-    print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-    ''')
+elif(var_choice == 2) and (var_pc_choice == 0):
+    print("You lost")
 
-    print("Computer chose: ")
-    if (pc_rand == 0):
-        print('''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
+elif (var_choice == 1) and (var_pc_choice == 2):
+    print("You lost")
 
-You lose
-        ''')
+elif (var_choice == 2) and (var_pc_choice == 1):
+    print("You won")
 
-    elif (pc_rand == 1):
-        print('''
-    _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
-
-You won
-        ''')
-
-    elif (pc_rand == 2):
-        print('''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-
-It's a draw
-        ''')
-    else:
-        print("An error occured! Contact admin.")
-else: 
-    print("Invalid option." +
-          "\nGame over!")
+else:
+    print("A logical error occured")
