@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-    Author     : Patrick Mwila
-    Instructor : Dr. Angela Yu
-    Description: This program simulates a simple adventure game.
+Author     : Patrick Mwila
+Instructor : Dr. Angela Yu
+Description: This program simulates a simple adventure game.
 """
 
 print('''
@@ -29,27 +29,30 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 
 # display a message
-print("Welcome to Treaure Island." + 
-      "\nYour mission is to find the treasure."
-     )
+print(
+  "Welcome to Treaure Island." + 
+  "\nYour mission is to find the treasure."
+)
 
 print("You're in a forest. Where do you want to go? \"left\" or \"right\"")
 var_direction = input().lower()
 
 # player survives if the answer is left
 if (var_direction == "left"):
-    print("\nYou find a river which splits the island in two." +
-          "\nWhat do you do? \"swim\" or \"wait\""
-         )
+    print(
+      "\nYou find a river which splits the island in two." +
+      "\nWhat do you do? \"swim\" or \"wait\""
+    )
     var_choice = input().lower()
 
     # player survives if the answer is wait
     if (var_choice == "wait"):
-        print("\nUpon waiting, a boat arrives and takes you to the other " + 
-              "\nside of the island." + 
-              "\nThere, you find a house having 3 doors of different colours."+
-              "\nWhich door do you open? \"red\", \"blue\", or \"yellow\" door"
-             )
+        print(
+          "\nUpon waiting, a boat arrives and takes you to the other " + 
+          "\nside of the island." + 
+          "\nThere, you find a house having 3 doors of different colours."+
+          "\nWhich door do you open? \"red\", \"blue\", or \"yellow\" door"
+        )
         var_door = input().lower()
 
         # check the door selected
@@ -111,8 +114,10 @@ if (var_direction == "left"):
 
             ''')
         else:
-            print("Invalid input!" + 
-                  "\nGame over!")
+            print(
+              "Invalid input!" + 
+              "\nGame over!"
+            )
 
     elif (var_choice == "swim"):
         print('''
@@ -130,9 +135,10 @@ if (var_direction == "left"):
 
         ''')
     else:
-        print("Invalid input." +
-              "\nGame over!"
-             )
+        print(
+          "Invalid input." +
+          "\nGame over!"
+        )
 # if player chooses right --> Game over
 elif (var_direction == "right"):
     print('''
@@ -154,6 +160,7 @@ elif (var_direction == "right"):
           ''')
 
 else:
-    print("Invalid input." +
-          "\nGame over!"
-         )
+    print(
+      "Invalid input." +
+      "\nGame over!"
+    )
