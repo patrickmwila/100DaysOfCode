@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-    Author     : Patrick Mwila
-    Instructor : Dr. Angela Yu
-    Description: This program implements a simple password generator.
+Author     : Patrick Mwila
+Instructor : Dr. Angela Yu
+Description: This program implements a simple password generator.
 """
 # import the required modules
 import random
