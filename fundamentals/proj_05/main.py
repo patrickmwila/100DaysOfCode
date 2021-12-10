@@ -29,15 +29,15 @@ var_num_of_symbols = int(input())
 print("\nHow many numbers would you like?")
 var_num_of_numbers = int(input())
 
-# create an empty string...
-var_password = ""
+# create an empty list...
+var_password = []
 
 # generate n-letters...
 for num in range(0, var_num_of_letters):
     var_num = random.randint(0, len(letters) - 1)
 
     # append the letter to the string var_password
-    var_password += letters[var_num]
+    var_password.append(letters[var_num])
 
 
 # generate n-symbols
@@ -46,7 +46,7 @@ for num in range(0, var_num_of_symbols):
     var_num = random.randint(0, len(symbols) - 1)
 
     # append the symbol to the string var_password
-    var_password += symbols[var_num]
+    var_password.append(symbols[var_num])
 
 
 # generate n-numbers
@@ -54,8 +54,19 @@ for num in range(0, var_num_of_numbers):
     var_num = random.randint(0, len(numbers) - 1)
 
     # append the number to the string var_password
-    var_password += numbers[var_num]
+    var_password.append(numbers[var_num])
 
 
-# display the password
-print(f"\nHere is your password: {var_password}")
+# use the shuffle method of the random classs to create a strong password
+random.shuffle(var_password)
+
+# accumulator to hold shuffled password as a string
+var_str_password = ""
+
+# use a loop to append the shuffled password to the var_str_password
+for char in var_password:
+    var_str_password += char
+
+
+# display the shuffled password
+print(f"\nHere is your password: {var_str_password}")
