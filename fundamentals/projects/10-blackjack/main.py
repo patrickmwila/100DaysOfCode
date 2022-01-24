@@ -85,7 +85,7 @@ def game_play():
 
             else:
                 print("Invalid input detected!")
-                is_game_over = True
+                exit(0)
 
     # computer play
     while pc_score != 0 and pc_score < 17:
