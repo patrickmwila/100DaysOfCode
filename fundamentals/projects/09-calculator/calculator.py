@@ -33,7 +33,7 @@ def divide(n1, n2):
     This is a division function
     :param n1: operand
     :param n2: operand
-    :return: The quotient n1 and n2
+    :return: The quotient of n1 and n2
     """
     return n1 / n2
 
