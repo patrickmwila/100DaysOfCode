@@ -47,11 +47,14 @@ def check_payment(coffee_price, user_price, add_to_profit):
     check's if the user has made enough payment to buy coffee
     :param coffee_price: dictionary containing coffee price
     :param user_price:  total price the user has entered
-    :param add_to_profit: dictionary containing profit key
+    :param add_to_profit: dictionary to add profit 
     :return: True if payment is successful
     """
     if user_price >= coffee_price:
-        add_to_profit["cost"] = coffee_price * 2
+
+        add_to_profit["Money"] = 0 
+        add_to_profit["Money"] += coffee_price
+
         return True
 
 
@@ -68,6 +71,7 @@ def process_coffee(flavour):
 
         except ValueError:
             print("Invalid Input detected")
+            exit(0)
 
         # TODO 6. check if transaction is successful
         if check_payment(MENU[flavour]["cost"], total, resources):
@@ -89,6 +93,7 @@ def process_coffee(flavour):
     else:
         print(check_resources(resources, MENU, flavour))
         exit(0)
+
 
 
 # TODO 1. turn off the coffee machine if owner enters off
