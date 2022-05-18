@@ -2,7 +2,7 @@
 """
     Author     : Patrick Mwila
     Instructor : Dr. Angela Yu
-    Description: This program implements a tip-calculator.
+    Description: A console tip-calculator.
 """
 
 # Display a message and prompt for input
